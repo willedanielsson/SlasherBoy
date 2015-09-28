@@ -6,6 +6,8 @@ public class simpleEnemyHP : MonoBehaviour {
 	public int curHP = 10;
 
 	public GameObject player;
+	public AudioClip sound;
+
 	public void Start(){
 		player = GameObject.Find("Player");
 	}
@@ -24,6 +26,10 @@ public class simpleEnemyHP : MonoBehaviour {
 
 	public void enemyDie(){
 		player.SendMessage("addExp", 1);
+		AudioSource audioSource = gameObject.GetComponent<AudioSource> ();
+		audioSource.volume = 0.1f;
+		sound = audioSource.clip;
+		AudioSource.PlayClipAtPoint (sound, transform.position);
 		Destroy(gameObject);
 	}
 }

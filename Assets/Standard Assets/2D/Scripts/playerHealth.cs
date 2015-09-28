@@ -25,7 +25,7 @@ public class playerHealth : MonoBehaviour {
 
 		
 		// Styling for the bar
-		GUIStyle barStyle = new GUIStyle ("box");
+		GUIStyle barStyle = new GUIStyle ();
 		barStyle.padding = new RectOffset (0, 0, 0, 0);
 		barStyle.fixedHeight = 0;
 		barStyle.fixedWidth = 0;
@@ -33,7 +33,7 @@ public class playerHealth : MonoBehaviour {
 		barStyle.stretchWidth = true;
 		
 		// Styling for the experince text
-		GUIStyle expStyle = new GUIStyle ("text");
+		GUIStyle expStyle = new GUIStyle ();
 		expStyle.normal.textColor = Color.yellow;
 		expStyle.fontSize = 30;
 
@@ -57,7 +57,7 @@ public class playerHealth : MonoBehaviour {
 		
 		GUI.EndGroup ();
 
-		GUI.Label (new Rect (Screen.width / 2, 0, Screen.width / 3, 32), "Exp: "+experience, expStyle);
+		GUI.Label (new Rect (Screen.width / 2, 0, 100, 32), "Exp: "+experience, expStyle);
 
 		             
 	}
