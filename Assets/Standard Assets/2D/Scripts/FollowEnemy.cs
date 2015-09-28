@@ -17,10 +17,13 @@ public class FollowEnemy : MonoBehaviour
 
 	void Update()
 	{
+
 		//rotate to look at the player
 		transform.eulerAngles = new Vector3 (0, 0, -transform.eulerAngles.z);
 		transform.LookAt(player.position);
 		transform.Rotate(new Vector3(0,-90,0),Space.Self);//correcting the original rotation
+
+
 
 		//move towards the player
 		if (Vector3.Distance(transform.position,player.position)>1f){//move if distance from target is greater than 1
