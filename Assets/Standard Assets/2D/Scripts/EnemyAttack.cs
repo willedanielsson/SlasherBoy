@@ -22,7 +22,7 @@ public class EnemyAttack : MonoBehaviour {
 
 	void OnCollisionExit2D(Collision2D collision){
 		if (collision.gameObject.tag == "Player") {
-			// Can be used in future
+			gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(4, 0)*500.0f);
 		}
 	}
 }

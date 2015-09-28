@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 327f3f86e8b76ee44bcddc51c1588652
-timeCreated: 1442823264
+timeCreated: 1443448208
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -53,9 +53,9 @@ TextureImporter:
     - name: RobotBoyAttackSprite2_0
       rect:
         serializedVersion: 2
-        x: 221
-        y: 1682
-        width: 275
+        x: 253
+        y: 1677
+        width: 248
         height: 275
       alignment: 0
       pivot: {x: .5, y: .5}

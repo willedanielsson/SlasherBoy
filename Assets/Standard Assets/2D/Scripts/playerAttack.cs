@@ -36,13 +36,14 @@ public class playerAttack : MonoBehaviour {
 		
 		anim.SetBool ("Attacking", attacking);
 	}
+	// SEE attackTrigger.cs for handling the collisions
 
-	void OnCollisionEnter2D(Collision2D coll){
+/*	void OnCollisionEnter2D(Collision2D coll){
 		if (attacking && coll.gameObject.tag == "Enemy") {
 			print("Player attacking");
-			coll.gameObject.SendMessage("AttackEnemy", 10);
+			//coll.gameObject.SendMessage("AttackEnemy", 10);
 			//coll.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(4, 0)*1000.0f);
 
 		}
-	}
+	}*/
 }
