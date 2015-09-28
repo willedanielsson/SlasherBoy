@@ -40,7 +40,7 @@ public class playerAttack : MonoBehaviour {
 	void OnCollisionEnter2D(Collision2D coll){
 		if (attacking && coll.gameObject.tag == "Enemy") {
 			print("Player attacking");
-			//coll.gameObject.SendMessage("ApplyDamage", 10);
+			coll.gameObject.SendMessage("AttackEnemy", 10);
 			//coll.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(4, 0)*1000.0f);
 
 		}
