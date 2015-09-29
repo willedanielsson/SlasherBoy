@@ -6,7 +6,7 @@ public class playerAttack : MonoBehaviour {
 	private bool attacking = false;
 	
 	private float attackTimer = 0;
-	private float attackCd = 0.3f;
+	private float attackCd = 0.1f;
 	
 	public Collider2D attackTrigger;
 	
@@ -36,4 +36,14 @@ public class playerAttack : MonoBehaviour {
 		
 		anim.SetBool ("Attacking", attacking);
 	}
+	// SEE attackTrigger.cs for handling the collisions
+
+/*	void OnCollisionEnter2D(Collision2D coll){
+		if (attacking && coll.gameObject.tag == "Enemy") {
+			print("Player attacking");
+			//coll.gameObject.SendMessage("AttackEnemy", 10);
+			//coll.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(4, 0)*1000.0f);
+
+		}
+	}*/
 }

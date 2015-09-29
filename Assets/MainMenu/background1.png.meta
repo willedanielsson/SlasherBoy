@@ -1,10 +1,9 @@
 fileFormatVersion: 2
-guid: 327f3f86e8b76ee44bcddc51c1588652
-timeCreated: 1443448208
+guid: 18f90a1ade42cbc479accea37c92c2df
+timeCreated: 1442942200
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: RobotBoyAttackSprite2_0
+  fileIDToRecycleName: {}
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -31,35 +30,25 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     filterMode: -1
-    aniso: 16
+    aniso: -1
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
   lightmap: 0
   rGBM: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: .5, y: .5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 248
+  spritePixelsToUnits: 100
   alphaIsTransparency: 1
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites:
-    - name: RobotBoyAttackSprite2_0
-      rect:
-        serializedVersion: 2
-        x: 253
-        y: 1677
-        width: 248
-        height: 275
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+    sprites: []
   spritePackingTag: 
   userData: 
   assetBundleName: 
