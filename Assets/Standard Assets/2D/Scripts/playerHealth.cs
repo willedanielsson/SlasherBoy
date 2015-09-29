@@ -5,7 +5,9 @@ public class playerHealth : MonoBehaviour {
 
 	public int maxHealth = 100;
 	public int curHealth = 100;
+	public int level = 0;
 	public int experience = 0;
+	public int skillpoint = 0;
 
 	public Texture2D bgImage;
 	public Texture2D fgImage;
