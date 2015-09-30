@@ -9,7 +9,8 @@ public class nextLevel : MonoBehaviour {
 			int currentLevel = int.Parse(currentLevelString);
 			int nextLevel = currentLevel+1;
 			string nextLevelString = nextLevel.ToString();
-			Application.LoadLevel(nextLevelString);
+			//print (nextLevelString);
+			Application.LoadLevel(""+nextLevelString);
 		}
 	}
 }
