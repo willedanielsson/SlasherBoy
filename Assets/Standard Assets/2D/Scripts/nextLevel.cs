@@ -5,12 +5,10 @@ public class nextLevel : MonoBehaviour {
 
 	void OnCollisionEnter2D(Collision2D col){
 		if (col.gameObject.name == "Player") {
-			string currentLevelString = Application.loadedLevelName;
-			int currentLevel = int.Parse(currentLevelString);
+			int currentLevel = Application.loadedLevel;
 			int nextLevel = currentLevel+1;
-			string nextLevelString = nextLevel.ToString();
 			//print (nextLevelString);
-			Application.LoadLevel(""+nextLevelString);
+			Application.LoadLevel(nextLevel);
 		}
 	}
 }
