@@ -5,6 +5,8 @@ public class nextLevel : MonoBehaviour {
 
 	void OnCollisionEnter2D(Collision2D col){
 		if (col.gameObject.name == "Player") {
+			playerHealth.curHealth = playerHealth.maxHealth;
+
 			int currentLevel = Application.loadedLevel;
 			int nextLevel = currentLevel+1;
 			//print (nextLevelString);

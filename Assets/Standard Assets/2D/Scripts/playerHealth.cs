@@ -4,8 +4,8 @@ using System.Collections;
 
 public class playerHealth : MonoBehaviour {
 	public Scrollbar healthBar;
-	public int maxHealth = 100;
-	public int curHealth = 100;
+	public static int maxHealth = 100;
+	public static int curHealth = 100;
 
 	public int level = 0;
 	public int experience = 0;
@@ -21,6 +21,12 @@ public class playerHealth : MonoBehaviour {
 	}
 
 	void OnGUI(){
+		// Styling for the experince text
+		GUIStyle hpStyle = new GUIStyle ();
+		hpStyle.normal.textColor = Color.white;
+		hpStyle.fontSize = 30;
+		GUI.Label (new Rect (0, 0, 100, 32), "Hp: "+curHealth, hpStyle);
+
 	
 		// Styling for the experince text
 		GUIStyle expStyle = new GUIStyle ();
@@ -47,6 +53,11 @@ public class playerHealth : MonoBehaviour {
 	private void playerDied(){
 		Application.LoadLevel ("MainMenu");
 
+	}
+
+	public void increaseMaxHP(){
+		print ("incrase");
+		maxHealth += 10;
 	}
 }
 	
