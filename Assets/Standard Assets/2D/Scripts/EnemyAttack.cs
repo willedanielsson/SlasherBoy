@@ -17,12 +17,19 @@ public class EnemyAttack : MonoBehaviour {
 		if (collision.gameObject.tag == "Player") {
 			print("Enemy attacking");
 			collision.gameObject.SendMessage("ApplyDamage", 8);
+			gameObject.GetComponent<Rigidbody2D> ().AddForce (new Vector2 (4, 0) * 500.0f);
+		}
+	}
+
+	void OnCollisionStay2D(Collision2D collision){
+		if (collision.gameObject.tag == "Player") {
+
 		}
 	}
 
 	void OnCollisionExit2D(Collision2D collision){
 		if (collision.gameObject.tag == "Player") {
-			gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(4, 0)*500.0f);
+			//gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(4, 0)*500.0f);
 		}
 	}
 }

@@ -13,6 +13,7 @@ public class GameOverHandler : MonoBehaviour {
 		int currentLevel = Application.loadedLevel;
 		int nextLevel = currentLevel+1;
 		Application.LoadLevel(nextLevel);
+		playerHealth.experience = experience;
 	}
 
 	public void upgradeHP(){
@@ -20,6 +21,7 @@ public class GameOverHandler : MonoBehaviour {
 			experience--;
 			int hp = playerHealth.maxHealth;
 			hp += 10;
+			playerHealth.curHealth +=10;
 			playerHealth.maxHealth = hp;
 		}
 	}
