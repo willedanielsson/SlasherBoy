@@ -8,7 +8,7 @@ public class playerHealth : MonoBehaviour {
 	public static int curHealth = 100;
 
 	public int level = 0;
-	public int experience = 0;
+	public static int experience = 0;
 	public int skillpoint = 0;
 
 	void Start(){
