@@ -9,7 +9,7 @@ public class playerAttack : MonoBehaviour {
 	private float attackCd = 0.1f;
 	
 	public Collider2D attackTrigger;
-	
+	public AudioClip sound;
 	private Animator anim;
 	
 	void Awake(){
@@ -23,6 +23,7 @@ public class playerAttack : MonoBehaviour {
 			attackTimer = attackCd;
 			
 			attackTrigger.enabled=true;
+			playAttackSound();
 		}
 		
 		if (attacking) {
@@ -36,6 +37,15 @@ public class playerAttack : MonoBehaviour {
 		
 		anim.SetBool ("Attacking", attacking);
 	}
+
+	private void playAttackSound(){
+		AudioSource[] audioSources = gameObject.GetComponents<AudioSource> ();
+		AudioSource attackSound = audioSources[0];
+		attackSound.volume = 0.1f;
+		sound = attackSound.clip;
+		AudioSource.PlayClipAtPoint (sound, transform.position);
+	}
+
 	// SEE attackTrigger.cs for handling the collisions
 
 /*	void OnCollisionEnter2D(Collision2D coll){
@@ -46,4 +56,5 @@ public class playerAttack : MonoBehaviour {
 
 		}
 	}*/
+
 }

@@ -4,6 +4,7 @@ using System.Collections;
 public class GameOverHandler : MonoBehaviour {
 
 	public void ChangeLevel(){
+		playerHealth.curHealth = playerHealth.maxHealth;
 		Application.LoadLevel (0);
 	}
 

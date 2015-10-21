@@ -11,7 +11,6 @@ public class playerHealth : MonoBehaviour {
 	public int experience = 0;
 	public int skillpoint = 0;
 
-
 	void Start(){
 
 	}
@@ -25,7 +24,7 @@ public class playerHealth : MonoBehaviour {
 		GUIStyle hpStyle = new GUIStyle ();
 		hpStyle.normal.textColor = Color.white;
 		hpStyle.fontSize = 30;
-		GUI.Label (new Rect (0, 0, 100, 32), "Hp: "+curHealth, hpStyle);
+		GUI.Label (new Rect (0, 0, 100, 32), "Hp: "+curHealth+"/"+maxHealth, hpStyle);
 
 	
 		// Styling for the experince text
@@ -51,10 +50,10 @@ public class playerHealth : MonoBehaviour {
 
 
 	private void playerDied(){
-		Application.LoadLevel ("MainMenu");
+		Application.LoadLevel ("GameOver");
 
 	}
-
+	
 	public void increaseMaxHP(){
 		print ("incrase");
 		maxHealth += 10;
